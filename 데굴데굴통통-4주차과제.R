@@ -52,7 +52,7 @@ names(playoff) <- teams
 
 TEAM_LIST <- list(teams, standings, playoff, roster)
 
-# 플레이오프에 실패한 팀을 출력하시오
+# 플레이오프 진출에 실패한 팀을 출력하시오
 names(playoff[playoff == FALSE])
 
 # 상위 3팀을 출력하시오
@@ -60,3 +60,6 @@ names(standings[standings <= 3])
 
 # GEN팀의 'top'포지션을 맡은 선수를 출력하시오
 names(GEN[position=='top'])
+
+# T!팀의 'mid'포지션을 맡은 선수를 출력하시오
+names(T1[position=='mid'])
