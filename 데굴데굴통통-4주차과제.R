@@ -1,6 +1,6 @@
 position <- factor( c('top', 'jg', 'mid', 'ad' ,'sup') , levels=c('top', 'jg', 'mid', 'ad' ,'sup') )
 
-GEN.roster <- c('Jihun', 'Canyon', 'Chovy', 'Peyz', 'Lehends')
+GEN.roster <- c('Kiin', 'Canyon', 'Chovy', 'Peyz', 'Lehends')
 GEN <- position
 names(GEN) <- GEN.roster
 
