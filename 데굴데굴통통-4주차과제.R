@@ -61,5 +61,5 @@ names(standings[standings <= 3])
 # GEN팀의 'top'포지션을 맡은 선수를 출력하시오
 names(GEN[position=='top'])
 
-# T!팀의 'mid'포지션을 맡은 선수를 출력하시오
+# T1팀의 'mid'포지션을 맡은 선수를 출력하시오
 names(T1[position=='mid'])
