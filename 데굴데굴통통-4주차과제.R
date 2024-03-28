@@ -1,56 +1,54 @@
-position <- factor( c('top', 'jg', 'mid', 'ad' ,'sup') , levels=c('top', 'jg', 'mid', 'ad' ,'sup') )
+TEAM_LIST <- list(teams = c('GEN', 'T1', 'HLE', 'KT', 'DK', 'KDF', 'BRO' ,'DRX', 'FOX', 'NS'),
+                  standings = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+                  playoff = c(TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE))
+
+position <- factor( c('top', 'jg', 'mid', 'ad' ,'sup') )
+
+TEAM_LIST$teams <- factor(TEAM_LIST$teams)
+
+names(TEAM_LIST$standings) <- TEAM_LIST$teams 
+names(TEAM_LIST$playoff) <- TEAM_LIST$teams 
 
 GEN.roster <- c('Kiin', 'Canyon', 'Chovy', 'Peyz', 'Lehends')
-GEN <- position
-names(GEN) <- GEN.roster
+GEN.position <- position
+names(GEN.position) <- GEN.roster
 
 T1.roster <- c('Zeus', 'Oner', 'Faker', 'Gumayusi', 'Keria')
-T1 <- position
-names(T1) <- T1.roster
+T1.position <- position
+names(T1.position) <- T1.roster
 
 HLE.roster <- c('Doran', 'Peanut', 'Zeka', 'Viper', 'Delight')
-HLE <- position
-names(HLE) <- HLE.roster
+HLE.position <- position
+names(HLE.position) <- HLE.roster
 
 KT.roster <- c('PerfecT', 'Pyosik', 'Bdd', 'Deft', 'BeryL')
-KT <- position
-names(KT) <- KT.roster
+KT.position <- position
+names(KT.position) <- KT.roster
 
 DK.roster <- c('Kingen', 'Lucid', 'ShowMaker', 'Aiming', 'Kellin')
-DK <- position
-names(DK) <- DK.roster
+DK.position <- position
+names(DK.position) <- DK.roster
 
 KDF.roster <- c('Dudu', 'Cuzz', 'BuLLDoG', 'Bull', 'Quantum')
-KDF <- position
-names(KDF) <- KDF.roster
+KDF.position <- position
+names(KDF.position) <- KDF.roster
 
 BRO.roster <- c('Morgan', 'GIDEON', 'Karis', 'Envyy', 'Effort')
-BRO <- position
-names(BRO) <- BRO.roster
+BRO.position <- position
+names(BRO.position) <- BRO.roster
 
 DRX.roster <- c('Rascal', 'Sponge', 'SeTab', 'Teddy', 'Pleata')
-DRX <- position
-names(DRX) <- DRX.roster
+DRX.position <- position
+names(DRX.position) <- DRX.roster
 
 FOX.roster <- c('Clear', 'Willer', 'Clozer', 'Hena', 'Execute')
-FOX <- position
-names(FOX) <- FOX.roster
+FOX.position <- position
+names(FOX.position) <- FOX.roster
 
 NS.roster <- c('DnDn', 'Sylvie', 'FIESTA', 'Jiwoo', 'Peter')
-NS <- position
-names(NS) <- NS.roster
+NS.position <- position
+names(NS.position) <- NS.roster
 
-
-teams <- c('GEN', 'T1', 'HLE', 'KT', 'DK', 'KDF', 'BRO' ,'DRX', 'FOX', 'NS')
-standings <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-playoff <- c(TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE)
-roster <- list(GEN = GEN.roster, T1 = T1.roster, HLE = HLE.roster, KT = KT.roster, DK = DK.roster, 
-               KDF = KDF.roster, BRO = BRO.roster, DRX = DRX.roster, FOX = FOX.roster, NS = NS.roster)
-names(standings) <- teams   
-names(playoff) <- teams          
-
-
-TEAM_LIST <- list(teams, standings, playoff, roster)
 
 # 플레이오프 진출에 실패한 팀을 출력하시오
 names(playoff[playoff == FALSE])
